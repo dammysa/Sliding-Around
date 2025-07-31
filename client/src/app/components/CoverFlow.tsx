@@ -37,10 +37,12 @@ export default function BookSliderCoverFlow({ books }: BookSliderProps) {
         className="w-[100%] pt-[50px] pb-[50px]"
       >
         {books.map((book) => (
-          <SwiperSlide className="bg-center bg-cover w-[200px]">
-            <img
+          <SwiperSlide key={book.id} className="bg-center bg-cover w-[200px]">
+            <Image
               src={book.thumbnail_src}
               alt={book.name}
+              width={200}
+              height={300}
               className="block w-[100%]"
             />
           </SwiperSlide>

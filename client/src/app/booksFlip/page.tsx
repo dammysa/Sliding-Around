@@ -3,6 +3,7 @@ import BookSliderFlip from "../components/FlipCard";
 import BookSliderCards from "../components/Cards";
 import BookSliderCoverFlow from "../components/CoverFlow";
 import BookSliderPaginationProgress from "../components/PaginationProgress";
+import Link from "next/link";
 
 export default async function BooksPage() {
   const result = await pool.query(`SELECT * FROM books ORDER BY id ASC`);
@@ -14,6 +15,7 @@ export default async function BooksPage() {
       <BookSliderCards books={books} />
       <BookSliderCoverFlow books={books} />
       <BookSliderPaginationProgress books={books} />
+      <Link href="/">Book Flipper</Link>
     </main>
   );
 }

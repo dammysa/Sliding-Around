@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 
 import { Book } from "../types/books";
+import Image from "next/image";
 
 interface BookSliderProps {
   books: Book[];
@@ -21,16 +22,17 @@ export default function BookSliderCards({ books }: BookSliderProps) {
       <Swiper
         effect={"cards"}
         grabCursor={true}
-        loop={true}
         modules={[EffectCards]}
         className="w-[30%]"
       >
         {books.map((book) => (
           <SwiperSlide key={book.id} className="bg-center bg-cover w-[200px]">
-            <img
+            <Image
               className="block w-[100%]"
               src={book.thumbnail_src}
               alt={book.name}
+              width={200}
+              height={300}
             />
           </SwiperSlide>
         ))}
