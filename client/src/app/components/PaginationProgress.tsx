@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -19,6 +19,9 @@ export default function BookSliderPaginationProgress({
 }: BookSliderProps) {
   return (
     <div className="mt-10">
+      <h2 className="text-2xl font-bold text-white text-center text-nowrap flex justify-center mb-10">
+        Book Slider with Coverflow
+      </h2>
       <Swiper
         pagination={{
           type: "progressbar",
@@ -26,7 +29,8 @@ export default function BookSliderPaginationProgress({
         navigation={true}
         slidesPerView={3}
         loop={true}
-        modules={[Pagination, Navigation]}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        modules={[Pagination, Navigation, Autoplay]}
         className="w-[100%]"
       >
         {books.map((book) => (

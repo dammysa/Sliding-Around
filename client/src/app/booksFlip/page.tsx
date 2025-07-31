@@ -17,7 +17,12 @@ export default async function BooksPage() {
       <BookSliderCoverFlow books={books} />
       <BookSliderPaginationProgress books={books} />
       <LearnMoreButton />
-      <Link href="/">Book Flipper</Link>
+      <Link
+        href="/"
+        className="text-2x1 font-bold mt-4 text-green-400 p-6 underline hover:text-green-300"
+      >
+        Home
+      </Link>
     </main>
   );
 }
