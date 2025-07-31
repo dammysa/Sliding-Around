@@ -19,6 +19,9 @@ export default function BookSliderPaginationProgress({
 }: BookSliderProps) {
   return (
     <div className="mt-10">
+      <h2 className="text-2xl font-bold text-white text-center text-nowrap flex justify-center mb-10">
+        Book Slider with Coverflow
+      </h2>
       <Swiper
         pagination={{
           type: "progressbar",

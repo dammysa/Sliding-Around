@@ -16,7 +16,7 @@ interface BookSliderProps {
 export default function BookSliderCards({ books }: BookSliderProps) {
   return (
     <>
-      <h2 className="text-2xl font-bold text-center text-nowrap flex justify-center mb-10 mt-1">
+      <h2 className="text-2xl font-bold text-white text-center text-nowrap flex justify-center mb-10 mt-1">
         Book Slider with Cards
       </h2>
       <Swiper

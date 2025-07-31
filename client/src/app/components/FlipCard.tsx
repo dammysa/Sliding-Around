@@ -20,7 +20,7 @@ export default function BookSliderFlip({ books }: BookSliderProps) {
       <div className="relative bg-center bg-cover w-[250px]">
         <div className="custom-pagination flex items-center relative justify-center top-10 z-10" />
 
-        <h2 className="text-2xl font-bold text-center text-nowrap flex justify-center mb-10">
+        <h2 className="text-2xl font-bold text-white text-center text-nowrap flex justify-center mb-10 mt-1">
           Book Slider with Flip
         </h2>
 
@@ -29,7 +29,7 @@ export default function BookSliderFlip({ books }: BookSliderProps) {
           style={
             {
               right: "-20px",
-              color: "white",
+              color: "#05df72",
             } as React.CSSProperties
           }
         />
@@ -38,7 +38,7 @@ export default function BookSliderFlip({ books }: BookSliderProps) {
           style={
             {
               left: "-20px",
-              color: "white",
+              color: "#05df72",
             } as React.CSSProperties
           }
         />
@@ -72,8 +72,12 @@ export default function BookSliderFlip({ books }: BookSliderProps) {
                     className="rounded-2xl"
                   />
                 </div>
-                <h3>{book.name}</h3>
-                <p>{book.author}</p>
+                <h3 className="text-1xl font-bold text-white text-center text-nowrap flex justify-center">
+                  {book.name}
+                </h3>
+                <p className="text-1xl font-bold text-white text-center text-nowrap flex justify-center">
+                  {book.author}
+                </p>
               </div>
             </SwiperSlide>
           ))}
