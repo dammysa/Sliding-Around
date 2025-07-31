@@ -94,10 +94,16 @@
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-font-weight: initial;
     }
 
     ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-font-weight: initial;
     }
   }
@@ -105,7 +111,6 @@
 
 @layer theme {
   :root, :host {
-    --color-white: #fff;
     --spacing: .25rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
@@ -460,12 +465,32 @@
 @layer components;
 
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
+
   .relative {
     position: relative;
   }
 
+  .top-6 {
+    top: calc(var(--spacing) * 6);
+  }
+
+  .left-1\/2 {
+    left: 50%;
+  }
+
+  .z-10 {
+    z-index: 10;
+  }
+
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
+  }
+
+  .block {
+    display: block;
   }
 
   .flex {
@@ -476,12 +501,29 @@
     height: calc(var(--spacing) * 80);
   }
 
-  .h-\[500px\] {
-    height: 500px;
+  .w-\[30\%\] {
+    width: 30%;
+  }
+
+  .w-\[100\%\] {
+    width: 100%;
+  }
+
+  .w-\[200px\] {
+    width: 200px;
+  }
+
+  .w-\[250px\] {
+    width: 250px;
   }
 
   .w-full {
     width: 100%;
+  }
+
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
   .flex-col {
@@ -492,6 +534,10 @@
     align-items: center;
   }
 
+  .justify-center {
+    justify-content: center;
+  }
+
   .rounded {
     border-radius: .25rem;
   }
@@ -500,16 +546,20 @@
     border-radius: var(--radius-2xl);
   }
 
-  .bg-white {
-    background-color: var(--color-white);
+  .bg-cover {
+    background-size: cover;
   }
 
-  .object-cover {
-    object-fit: cover;
+  .bg-center {
+    background-position: center;
   }
 
-  .py-10 {
-    padding-block: calc(var(--spacing) * 10);
+  .pt-\[50px\] {
+    padding-top: 50px;
+  }
+
+  .pb-\[50px\] {
+    padding-bottom: 50px;
   }
 
   .text-center {
@@ -526,6 +576,10 @@
     font-weight: var(--font-weight-bold);
   }
 
+  .text-nowrap {
+    text-wrap: nowrap;
+  }
+
   .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -539,15 +593,37 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #3a3a3a;
     --foreground: #ededed;
   }
+}
+
+.swiper-pagination-bullet {
+  margin-left: .5rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 
 @property --tw-font-weight {
