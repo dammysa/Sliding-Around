@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///home/dodge/lesson1/software-dev20/week-10/Sliding-Around/client/src/app/page.tsx"],"sourcesContent":["import Link from \"next/link\";\n\nexport default async function Home() {\n  console.log(process.env.TEST);\n  return (\n    <main>\n      <nav>\n        <Link href=\"/booksFlip\">Book Flipper</Link>\n      </nav>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;AAAA;;;AAEe,eAAe;IAC5B,QAAQ,GAAG,CAAC,QAAQ,GAAG,CAAC,IAAI;IAC5B,qBACE,8OAAC;kBACC,cAAA,8OAAC;sBACC,cAAA,8OAAC,4JAAA,CAAA,UAAI;gBAAC,MAAK;0BAAa;;;;;;;;;;;;;;;;AAIhC","debugId":null}}]
-}
