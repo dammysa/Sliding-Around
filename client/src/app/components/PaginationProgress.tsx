@@ -18,7 +18,7 @@ export default function BookSliderPaginationProgress({
   books,
 }: BookSliderProps) {
   return (
-    <>
+    <div className="mt-10">
       <Swiper
         pagination={{
           type: "progressbar",
@@ -41,6 +41,6 @@ export default function BookSliderPaginationProgress({
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 }
