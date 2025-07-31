@@ -21,6 +21,7 @@ export default function BookSliderCards({ books }: BookSliderProps) {
       <Swiper
         effect={"cards"}
         grabCursor={true}
+        loop={true}
         modules={[EffectCards]}
         className="w-[30%]"
       >
