@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -29,7 +29,8 @@ export default function BookSliderPaginationProgress({
         navigation={true}
         slidesPerView={3}
         loop={true}
-        modules={[Pagination, Navigation]}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        modules={[Pagination, Navigation, Autoplay]}
         className="w-[100%]"
       >
         {books.map((book) => (

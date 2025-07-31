@@ -2,7 +2,7 @@
 // Swiper requires Client to function
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, EffectFlip } from "swiper/modules";
+import { A11y, Navigation, Pagination, EffectFlip } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/bundle";
 
@@ -44,13 +44,19 @@ export default function BookSliderFlip({ books }: BookSliderProps) {
         />
         {/* Swiper component - Uses modules to register each feature, effect=flip for flipping. allows a grabCursor when hovering over it. Pagination dots at the bottom for navigation. Navigation has arrows left and right. Adding space between, same as in CSS. Slides per view allows only 2 in view. Uses custom navigation with nextEl and prevEl */}
         <Swiper
-          modules={[EffectFlip, Pagination, Navigation]}
+          modules={[A11y, EffectFlip, Pagination, Navigation]}
           effect="flip"
           grabCursor={true}
+          a11y={{
+            enabled: true,
+            prevSlideMessage: "Previous book",
+            nextSlideMessage: "Next book",
+          }}
           pagination={{
             el: ".custom-pagination",
             clickable: true,
           }}
+          keyboard={{ enabled: true }}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
