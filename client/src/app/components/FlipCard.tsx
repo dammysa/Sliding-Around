@@ -18,8 +18,6 @@ export default function BookSliderFlip({ books }: BookSliderProps) {
   return (
     <div className="w-full flex justify-center">
       <div className="relative bg-center bg-cover w-[250px]">
-        <div className="custom-pagination flex items-center relative justify-center top-10 z-10" />
-
         <h2 className="text-2xl font-bold text-white text-center text-nowrap flex justify-center mb-10 mt-1">
           Book Slider with Flip
         </h2>
@@ -65,6 +63,7 @@ export default function BookSliderFlip({ books }: BookSliderProps) {
           loop={true}
           className="rounded"
         >
+          <div className="custom-pagination relative flex items-center justify-center top-0 z-10 right-0.5" />
           {/* Loops the array into swiper slides */}
           {books.map((book) => (
             <SwiperSlide key={book.id}>
